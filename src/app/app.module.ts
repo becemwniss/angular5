@@ -1,30 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
 
-
-import { AppComponent } from './app.component';
-import { ArticleComponent } from './article/article.component';
-import { ProductsListComponent } from './products-list/products-list.component';
-import { ProductRowComponent } from './product-row/product-row.component';
-import { ProductImageComponent } from './product-image/product-image.component';
-import { PriceDisplayComponent } from './price-display/price-display.component';
-import { ProductDepartmentComponent } from './product-department/product-department.component';
-
+import {AppComponent} from './app.component';
+import {SimpleHttpComponent} from './simple-http/simple-http.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleComponent,
-    ProductsListComponent,
-    ProductRowComponent,
-    ProductImageComponent,
-    PriceDisplayComponent,
-    ProductDepartmentComponent
+    SimpleHttpComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

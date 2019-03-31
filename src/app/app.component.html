@@ -1,27 +1,45 @@
 <!--<form class="ui large form segment">-->
-  <!--<h3 class="ui header">Add a Link</h3>-->
-  <!--<div class="field">-->
-    <!--<label for="title">Title:</label>-->
-    <!--<input name="title" #newtitle>-->
-  <!--</div>-->
-  <!--<div class="field">-->
-    <!--<label for="link">Link:</label>-->
-    <!--<input name="link" #newlink>-->
-  <!--</div>-->
-  <!--<button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">-->
-    <!--Submit link-->
-  <!--</button>-->
+<!--<h3 class="ui header">Add a Link</h3>-->
+<!--<div class="field">-->
+<!--<label for="title">Title:</label>-->
+<!--<input name="title" #newtitle>-->
+<!--</div>-->
+<!--<div class="field">-->
+<!--<label for="link">Link:</label>-->
+<!--<input name="link" #newlink>-->
+<!--</div>-->
+<!--<button (click)="addArticle(newtitle, newlink)" class="ui positive right floated button">-->
+<!--Submit link-->
+<!--</button>-->
 <!--</form>-->
 
 <!--<div class="ui grid posts">-->
-  <!--<app-article *ngFor="let article of sortedArticles()" [article]="article">-->
-  <!--</app-article>-->
+<!--<app-article *ngFor="let article of sortedArticles()" [article]="article">-->
+<!--</app-article>-->
 <!--</div>-->
 
-<div class="inventory-app">
 
-  <products-list [productList]="products" (onProductSelected)="productWasSelected($event)">
+<!--<div class="inventory-app">-->
 
-  </products-list>
+<!--<products-list [productsList]="products" (onProductSelected)="productWasSelected($event)">-->
 
-</div>
+<!--</products-list>-->
+
+<!--</div>-->
+
+
+<!--<app-form-sku></app-form-sku>-->
+
+<!--<app-simple-http></app-simple-http>-->
+
+
+<form #f="ngForm" (ngSubmit)="makeRequest(f.value)">
+  <input class="form-control" type="text" placeholder="search" autofocus>
+  <button type="submit">make request</button>
+  {{f.value}}
+</form>
+
+
+
+
+
