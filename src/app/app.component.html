@@ -39,10 +39,9 @@
 <!--<app-simple-http></app-simple-http>-->
 
 
-<form #f="ngForm" (ngSubmit)="makeRequest(f.value)">
-  <input class="form-control" type="text" placeholder="search" autofocus>
+<form [formGroup]="myForm" (ngSubmit)="makeRequest(myForm.value)">
+  <input  [formControl]="myForm.controls['word']" class="form-control" type="text" placeholder="search" autofocus>
   <button type="submit">make request</button>
-  {{f.value}}
 </form>
 
 
